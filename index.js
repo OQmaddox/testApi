@@ -13,6 +13,14 @@ app.get('/', (req, res) => {
     })
 })
 
+app.post('/usuarios', (req, res) => {
+    const { nombre } = req.body
+    sms = `Hola ${nombre}`
+    res.send({
+        msg
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`server on port ${PORT}`)
 })
