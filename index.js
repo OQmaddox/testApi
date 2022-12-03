@@ -14,10 +14,11 @@ app.get('/', (req, res) => {
 })
 
 app.post('/usuarios', (req, res) => {
+    console.log(req.body)
     const { nombre } = req.body
     sms = `Hola ${nombre}`
     res.send({
-        msg
+        sms
     })
 })
 
